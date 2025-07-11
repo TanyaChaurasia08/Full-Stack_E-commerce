@@ -1,41 +1,4 @@
-import p1_img from "./product_1.png";
-import p2_img from "./product_2.png";
-import p3_img from "./product_3.png";
-import p4_img from "./product_4.png";
-import p5_img from "./product_5.png";
-import p6_img from "./product_6.png";
-import p7_img from "./product_7.png";
-import p8_img from "./product_8.png";
-import p9_img from "./product_9.png";
-import p10_img from "./product_10.png";
-import p11_img from "./product_11.png";
-import p12_img from "./product_12.png";
-import p13_img from "./product_13.png";
-import p14_img from "./product_14.png";
-import p15_img from "./product_15.png";
-import p16_img from "./product_16.png";
-import p17_img from "./product_17.png";
-import p18_img from "./product_18.png";
-import p19_img from "./product_19.png";
-import p20_img from "./product_20.png";
-import p21_img from "./product_21.png";
-import p22_img from "./product_22.png";
-import p23_img from "./product_23.png";
-import p24_img from "./product_24.png";
-import p25_img from "./product_25.png";
-import p26_img from "./product_26.png";
-import p27_img from "./product_27.png";
-import p28_img from "./product_28.png";
-import p29_img from "./product_29.png";
-import p30_img from "./product_30.png";
-import p31_img from "./product_31.png";
-import p32_img from "./product_32.png";
-import p33_img from "./product_33.png";
-import p34_img from "./product_34.png";
-import p35_img from "./product_35.png";
-import p36_img from "./product_36.png";
-module.exports=[
-
+const products = [
     {
       id: 1,
       name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
@@ -48,15 +11,15 @@ module.exports=[
       id: 2,
       name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
       category: "womens",
-      image: "http://localhost:4000/images/product_2.png",
+      image: "http://localhost:4000/images/product_2_copy.png",
       new_price: 85.0,
       old_price: 120.5,
     },
     {
       id: 3,
-      name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+      name: "Cotton Linen Saree with Subtle Checks and Designer Tassels",
       category: "womens",
-      image: "http://localhost:4000/images/product_3.png",
+      image: "http://localhost:4000/images/prachi.jpg",
       new_price: 60.0,
       old_price: 100.5,
     },
@@ -323,9 +286,107 @@ module.exports=[
     //   image: p36_img,
     //   new_price: 85.0,
     //   old_price: 120.5,
-    // },
-  
-  
+    // },   
+];
+module.exports = products;
 
-    
-]
+// const Products = [
+//   {
+//     id: 1,
+//     name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+//     category: "womens",
+//     image: "https://images.unsplash.com/photo-1618354691267-bf38c0a1eea2",
+//     new_price: 50.0,
+//     old_price: 80.5,
+//   },
+//   {
+//     id: 2,
+//     name: "Elegant Floral Midi Dress",
+//     category: "womens",
+//     image: "https://source.unsplash.com/600x600/?dress,women",
+//     new_price: 85.0,
+//     old_price: 120.5,
+//   },
+//   {
+//     id: 3,
+//     name: "Casual Women's Shirt",
+//     category: "womens",
+//     image: "https://source.unsplash.com/600x600/?shirt,women",
+//     new_price: 60.0,
+//     old_price: 100.5,
+//   },
+//   {
+//     id: 4,
+//     name: "Formal Women's Blazer",
+//     category: "womens",
+//     image: "https://source.unsplash.com/600x600/?blazer,women",
+//     new_price: 100.0,
+//     old_price: 150.0,
+//   },
+//   {
+//     id: 5,
+//     name: "Stylish Summer Top",
+//     category: "womens",
+//     image: "https://source.unsplash.com/600x600/?top,women",
+//     new_price: 85.0,
+//     old_price: 120.5,
+//   },
+//   {
+//     id: 6,
+//     name: "Men's Slim Fit Blazer",
+//     category: "mens",
+//     image: "https://source.unsplash.com/600x600/?blazer,men",
+//     new_price: 95.0,
+//     old_price: 130.5,
+//   },
+//   {
+//     id: 7,
+//     name: "Men's T-Shirt",
+//     category: "mens",
+//     image: "https://source.unsplash.com/600x600/?tshirt,men",
+//     new_price: 45.0,
+//     old_price: 70.0,
+//   },
+//   {
+//     id: 8,
+//     name: "Men's Hooded Jacket",
+//     category: "mens",
+//     image: "https://source.unsplash.com/600x600/?jacket,men",
+//     new_price: 110.0,
+//     old_price: 160.0,
+//   },
+//   {
+//     id: 9,
+//     name: "Men's Check Shirt",
+//     category: "mens",
+//     image: "https://source.unsplash.com/600x600/?shirt,men",
+//     new_price: 60.0,
+//     old_price: 90.0,
+//   },
+//   {
+//     id: 10,
+//     name: "Kids Colorful Hoodie",
+//     category: "kids",
+//     image: "https://source.unsplash.com/600x600/?hoodie,kids",
+//     new_price: 55.0,
+//     old_price: 75.5,
+//   },
+//   {
+//     id: 11,
+//     name: "Kids Casual T-Shirt",
+//     category: "kids",
+//     image: "https://source.unsplash.com/600x600/?tshirt,kids",
+//     new_price: 35.0,
+//     old_price: 60.0,
+//   },
+//   {
+//     id: 12,
+//     name: "Kids Winter Jacket",
+//     category: "kids",
+//     image: "https://source.unsplash.com/600x600/?jacket,kids",
+//     new_price: 75.0,
+//     old_price: 95.0,
+//   },
+// ];
+
+// module.exports = Products;

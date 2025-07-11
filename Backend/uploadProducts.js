@@ -4,7 +4,7 @@ const Product = require("./model/Product");
 
 const products = require("./all_product_local"); // You'll create this below
 
-mongoose.connect("mongodb+srv://Tanya_Chaurasia:qwer1234@ecommerce.zfrmr1w.mongodb.net/E-commerce")
+mongoose.connect("mongodb://localhost:27017/TanyaEcomm")
   .then(async () => {
     await Product.deleteMany(); // Optional: clear existing products
     await Product.insertMany(products);

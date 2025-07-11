@@ -1,6 +1,7 @@
 const port=4000;
 const paymentRoute = require('./routes/Payment.js'); 
 const Product=require('./model/Product.js');
+const products = require("./all_product_local")
 const express=require('express')
 const app=express();
 const mongoose=require('mongoose')
@@ -18,10 +19,29 @@ app.use('/api/users',userRouter);
 app.get("/",(req,res)=>{    
     res.send("express app is running")
 })
+// when adding new data
+// mongoose.connect("mongodb://localhost:27017/TanyaEcomm", {
+// }).then(async () => {
+//   console.log("MongoDB connected.");
+
+//   try {
+//     // Optionally clear existing data
+//     await Product.deleteMany({});
+//     console.log("Old products deleted.");
+
+//     // Insert new data
+//     await Product.insertMany(products);
+//     console.log("Products inserted successfully!");
+//   } catch (err) {
+//     console.error("Error inserting products:", err);
+//   } 
+// }).catch(err => {
+//   console.error("MongoDB connection error:", err);
+// });
 app.get('/api/newcollections', async (req, res) => {
   try {
     let products = await Product.find({});
-    let newcollection = products.slice(-8); // ✅ Get last 8 items directly
+    let newcollection = products.slice(0,8); 
     console.log("NewCollection Fetched");
     res.send(newcollection);
   } catch (error) {
@@ -32,7 +52,7 @@ app.get('/api/newcollections', async (req, res) => {
 
 
 //Database Connection with Monodb
-mongoose.connect("mongodb+srv://Tanya_Chaurasia:qwer1234@ecommerce.zfrmr1w.mongodb.net/E-commerce")
+mongoose.connect("mongodb://localhost:27017/TanyaEcomm")
 console.log("MongoDB connect Successfully");
 
 app.listen(port,(error)=>{
