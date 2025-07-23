@@ -2,6 +2,7 @@ const port=4000;
 const paymentRoute = require('./routes/Payment.js'); 
 const Product=require('./model/Product.js');
 const products = require("./all_product_local")
+const newProduct = require("./Admin/assets/all_product.js");
 const express=require('express')
 const app=express();
 const mongoose=require('mongoose')
@@ -26,11 +27,11 @@ app.get("/",(req,res)=>{
 
 //   try {
 //     // Optionally clear existing data
-//     await Product.deleteMany({});
 //     console.log("Old products deleted.");
 
 //     // Insert new data
-//     await Product.insertMany(products);
+//     // await Product.deleteMany({});
+//     await Product.insertMany(newProduct);
 //     console.log("Products inserted successfully!");
 //   } catch (err) {
 //     console.error("Error inserting products:", err);
