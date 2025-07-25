@@ -20,7 +20,7 @@ app.use('/api/users',userRouter);
 app.get("/",(req,res)=>{    
     res.send("express app is running")
 })
-// when adding new data
+
 // mongoose.connect("mongodb://localhost:27017/TanyaEcomm", {
 // }).then(async () => {
 //   console.log("MongoDB connected.");
@@ -31,7 +31,7 @@ app.get("/",(req,res)=>{
 
 //     // Insert new data
 //     // await Product.deleteMany({});
-//     await Product.insertMany(newProduct);
+//     await Product.insertMany(products);
 //     console.log("Products inserted successfully!");
 //   } catch (err) {
 //     console.error("Error inserting products:", err);
