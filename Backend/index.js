@@ -21,24 +21,25 @@ app.get("/",(req,res)=>{
     res.send("express app is running")
 })
 
-// mongoose.connect("mongodb://localhost:27017/TanyaEcomm", {
-// }).then(async () => {
-//   console.log("MongoDB connected.");
+mongoose.connect("mongodb://localhost:27017/TanyaEcomm", {
+}).then(async () => {
+  console.log("MongoDB connected.");
 
-//   try {
-//     // Optionally clear existing data
-//     console.log("Old products deleted.");
+  try {
+    // Optionally clear existing data
+    console.log("Old products deleted.");
 
-//     // Insert new data
-//     // await Product.deleteMany({});
-//     await Product.insertMany(products);
-//     console.log("Products inserted successfully!");
-//   } catch (err) {
-//     console.error("Error inserting products:", err);
-//   } 
-// }).catch(err => {
-//   console.error("MongoDB connection error:", err);
-// });
+    // Insert new data
+    await Product.deleteMany({});
+    await Product.insertMany(products);
+    await Product.insertMany(newProduct);
+    console.log("Products inserted successfully!");
+  } catch (err) {
+    console.error("Error inserting products:", err);
+  } 
+}).catch(err => {
+  console.error("MongoDB connection error:", err);
+});
 app.get('/api/newcollections', async (req, res) => {
   try {
     let products = await Product.find({});
